@@ -13,8 +13,10 @@ public class TheaterReservations {
         Scanner scanner = new Scanner(System.in);
 
         //prompt for users name
-        System.out.printf("Please enter your name: ");
-        String fullName = scanner.nextLine();
+        System.out.printf("Please enter your first name: ");
+        String firstName = scanner.nextLine();
+        System.out.printf("Please enter your last name: ");
+        String lastName = scanner.nextLine();
 
         //prompt for users show date
         System.out.printf("What date will you be coming (MM/dd/yyyy): ");
@@ -32,14 +34,14 @@ public class TheaterReservations {
         //display confirmation  message if over 1 ticket amount
         if(txAmount > 1) {
             String confirmationMessage;
-            System.out.printf("%d tickets reserved for %s under %s"
-                    , txAmount, formattedShowDate, fullName);
+            System.out.printf("%d tickets reserved for %s under %s, %s"
+                    , txAmount, formattedShowDate, lastName, firstName);
         }
         //display confirmation message if only 1 ticket
         if(txAmount == 1) {
             String  confirmationMessageTwo;
-            System.out.printf("%d ticket reserved for %s under %s"
-                    , txAmount, formattedShowDate, fullName);
+            System.out.printf("%d ticket reserved for %s under %s, %s"
+                    , txAmount, formattedShowDate, lastName, firstName);
         }
 
 
